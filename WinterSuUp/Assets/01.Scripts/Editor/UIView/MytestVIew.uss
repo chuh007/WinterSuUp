@@ -1,0 +1,14 @@
+.data-row {
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.img-container {
+}
+
+.image {
+}
+
+.data-container {
+}

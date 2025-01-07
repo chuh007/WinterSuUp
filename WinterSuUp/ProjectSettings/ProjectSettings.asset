@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: d9dd79ec80b2a644a87073df0b74408c
+  productGUID: 61105be02e68e634caf6b51acf4a14c8
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: WinterSuUp
+  productName: Vacation
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -856,14 +856,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: WinterSuUp
+  metroPackageName: Vacation
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: WinterSuUp
+  metroApplicationDescription: Vacation
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -934,11 +934,11 @@ PlayerSettings:
   captureStartupLogs: {}
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 2e697a11-ef1d-449d-9149-f9a1e9461167
+  cloudProjectId: a2a513de-2c1d-49f2-9c4f-5fb37a246463
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: WinterSuUp
-  organizationId: chuh007
+  projectName: Vacation
+  organizationId: ggach1
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

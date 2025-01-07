@@ -1,9 +1,0 @@
-<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <engine:VisualElement name="Continer" style="flex-grow: 1; flex-direction: row; align-items: flex-start; padding-left: 10px;">
-        <engine:VisualElement style="flex-grow: 1; flex-shrink: 0;">
-            <engine:VisualElement name="VisualElement" style="flex-grow: 0; width: 64px; height: 64px; background-image: url(&quot;project://database/Assets/09Graphics/Sprites/Skill/leaf-acid-3.png?fileID=21300000&amp;guid=64632558d94745c46a02fc6e76758455&amp;type=3#leaf-acid-3&quot;);" />
-        </engine:VisualElement>
-        <engine:Label text="Label" style="flex-shrink: 1;" />
-        <engine:Button text="삭제" style="flex-shrink: 1; background-color: rgb(255, 0, 0);" />
-    </engine:VisualElement>
-</engine:UXML>

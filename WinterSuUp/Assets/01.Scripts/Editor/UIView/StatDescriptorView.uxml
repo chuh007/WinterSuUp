@@ -1,0 +1,12 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <engine:VisualElement name="Container" style="flex-grow: 0; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; border-top-width: 1px; border-right-width: 1px; border-bottom-width: 1px; border-left-width: 1px; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; border-left-color: rgba(255, 255, 255, 0); border-right-color: rgba(255, 255, 255, 0); border-top-color: rgba(255, 255, 255, 0); border-bottom-color: rgba(255, 255, 255, 0);">
+        <engine:VisualElement name="DataRow" style="flex-grow: 1; flex-direction: row; align-self: auto; align-items: flex-start;">
+            <engine:FloatField value="42.2" name="DefaultField" binding-path="defaultValue" style="flex-grow: 1; padding-right: 10px;" />
+            <editor:ObjectField name="SpriteField" binding-path="image" style="flex-grow: 0; flex-basis: 40%;" />
+        </engine:VisualElement>
+        <engine:VisualElement name="AddtionalData" style="flex-grow: 1;">
+            <editor:PropertyField name="IsShowField" binding-path="isShow" label="IsShow" />
+            <editor:PropertyField name="StatNameField" binding-path="statName" label="StatName" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>
