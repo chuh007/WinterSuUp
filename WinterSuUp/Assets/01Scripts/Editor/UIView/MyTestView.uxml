@@ -1,0 +1,15 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/UI/MyTestView.uss?fileID=7433441132597879392&amp;guid=0d21bb5c0452b1b4a81b6785381447f1&amp;type=3#MyTestView" />
+    <engine:VisualElement name="DataRow" class="data_low">
+        <engine:VisualElement name="ImageContainer" class="img-container">
+            <engine:VisualElement name="Image" class="image" />
+        </engine:VisualElement>
+        <engine:VisualElement name="Container" class="container">
+            <editor:ObjectField label="Sprite" name="SpriteField" binding-path="sprite" type="UnityEngine.Sprite, UnityEngine.CoreModule" />
+            <engine:Toggle label="Has Name" toggle-on-label-click="true" binding-path="hasName" name="HasNameToggle" />
+            <engine:TextField label="My Name" placeholder-text="filler text" binding-path="myName" name="MyNameInput" style="display: none;" />
+            <engine:IntegerField label="myInt" value="42" binding-path="myInt" name="MyIntInput" />
+            <engine:FloatField label="myFloat" value="42.2" binding-path="myFloat" name="MyFloatInput" />
+        </engine:VisualElement>
+    </engine:VisualElement>
+</engine:UXML>

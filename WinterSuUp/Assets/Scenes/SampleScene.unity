@@ -553,6 +553,7 @@ GameObject:
   m_Component:
   - component: {fileID: 430533991}
   - component: {fileID: 430533992}
+  - component: {fileID: 430533993}
   m_Layer: 0
   m_Name: Test
   m_TagString: Untagged
@@ -587,10 +588,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2357d16acfc411746a693491ee4b0018, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sprite: {fileID: 21300000, guid: 66c9922bc662b7e4a8b69e32d518d793, type: 3}
   hasName: 1
   myName: 
   myFloat: 0
   myInt: 0
+--- !u!114 &430533993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430533990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ffd184bc1bce9745a5f073ae240db6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myStats:
+  - defultValue: 0
+    image: {fileID: 0}
+    isShow: 0
+    statName: 
 --- !u!1 &528230281
 GameObject:
   m_ObjectHideFlags: 0
