@@ -15,6 +15,8 @@ public class StatEditorWindow : EditorWindow
     private VisualElement _inspector;
     private Editor _cachedEditor;
 
+    private StatViewUI _selectedItem = null;
+
     [MenuItem("Tools/StatEditor")]
     public static void ShowWindow()
     {
@@ -69,9 +71,13 @@ public class StatEditorWindow : EditorWindow
     private void InitializeTable(VisualElement root)
     {
         _listScrollView = root.Q<ScrollView>("ListScrollView");
-        _listScrollView.Clear();
-
         _inspector = root.Q<VisualElement>("Inspector");
+        RefreshListUI();
+    }
+
+    private void RefreshListUI()
+    {
+        _listScrollView.Clear();
         _inspector.Clear();
 
         foreach (StatSO stat in _statDatabase.Table)
@@ -82,6 +88,21 @@ public class StatEditorWindow : EditorWindow
             StatViewUI statView = new StatViewUI(statViewUI, stat);
 
             statView.OnSelect += HandleItemSelect;
+            statView.OnDelete += HandleDeleteItem;
+        }
+    }
+
+    private void HandleDeleteItem(StatViewUI target)
+    {
+        if(EditorUtility.DisplayDialog("Delete","Are you sure?", "Yes", "No"))
+        {
+            string assetPath = AssetDatabase.GetAssetPath(target.targetStat);
+            AssetDatabase.DeleteAsset(assetPath);
+            _statDatabase.Table.Remove(target.targetStat);
+            EditorUtility.SetDirty(_statDatabase);
+            AssetDatabase.SaveAssets();
+
+            RefreshListUI();
         }
     }
 
@@ -93,7 +114,16 @@ public class StatEditorWindow : EditorWindow
         SerializedObject so = new SerializedObject(selectUI.targetStat);
         statInspector.Bind(so);
 
+        statInspector.TrackSerializedObjectValue(so, (target) =>
+        {
+            selectUI.RefreshUI();
+        });
+
         _inspector.Clear();
         _inspector.Add(statInspector);
+
+        _selectedItem?.SetSelection(false);
+        _selectedItem = selectUI;
+        _selectedItem?.SetSelection(true);
     }
 }

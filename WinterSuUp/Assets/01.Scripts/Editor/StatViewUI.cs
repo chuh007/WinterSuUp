@@ -1,4 +1,5 @@
 using System;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -13,6 +14,8 @@ public class StatViewUI
 
     public StatSO targetStat;
 
+    private VisualElement _container;
+
     public StatViewUI(TemplateContainer root, StatSO stat)
     {
         root.RegisterCallback<ClickEvent>(HandleItemSelect);
@@ -21,20 +24,33 @@ public class StatViewUI
         sprite = root.Q<VisualElement>("Image");
         titleLabel = root.Q<Label>("StatTitle");
         deleteBtn = root.Q<Button>("DeleteBtn");
-        deleteBtn.clicked += HandleDelete;
+        _container = root.Q<VisualElement>("Container");
+        deleteBtn.RegisterValueChangedCallback(HandleDelete);
+        //deleteBtn.clicked += HandleDelete;
 
         RefreshUI();
     }
 
-    private void RefreshUI()
+    
+
+    public void SetSelection(bool isSelectd)
+    {
+        if (isSelectd)
+            _container.AddToClassList("select");
+        else
+            _container.RemoveFromClassList("select");
+    }
+
+    public void RefreshUI()
     {
         sprite.style.backgroundImage = new StyleBackground(targetStat.icon);
         titleLabel.text = targetStat.statName;
     }
 
-    private void HandleDelete()
+    private void HandleDelete(ChangeEvent<string> evt)
     {
-        
+        evt.StopPropagation();
+        OnDelete?.Invoke(this);
     }
 
     private void HandleItemSelect(ClickEvent evt)

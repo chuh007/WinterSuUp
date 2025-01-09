@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: f06821eea2740d642a655d71806c063d
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _statSOViewAsset: {fileID: 9197481963319205126, guid: 63b9086777d5caa408e4c4394ffaf0eb, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

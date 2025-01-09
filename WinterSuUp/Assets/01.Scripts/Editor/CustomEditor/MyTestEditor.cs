@@ -36,7 +36,7 @@ public class MyTestEditor : Editor
     private void HandleSpriteChanged(ChangeEvent<UnityEngine.Object> evt)
     {
         Sprite newSprite = evt.newValue as Sprite;
-        _imgView.style.backgroundImage = new StyleBackground(newSprite);
+        //_imgView.style.backgroundImage = new StyleBackground(newSprite);
     }
 
     private void HandleValueChanged(ChangeEvent<bool> evt)
